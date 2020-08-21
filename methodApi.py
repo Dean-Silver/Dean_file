@@ -2,28 +2,28 @@ from jpype import *
 from time import sleep
 import data
 def login(driver):
-        print
-        getDefaultJVMPath()
-        startJVM(getDefaultJVMPath(), "-ea", r"-Djava.class.path=F:\sikuli\sikulixapi.jar")
-        java.lang.System.out.println("hello world")
-        Screen = JClass("org.sikuli.script.Screen")
-        screen = Screen()
-        screen.type(r"F:\python\test\webauto\img\admin.png", "apeuni")
-        sleep(1)
-        screen.type(r"F:\python\test\webauto\img\pass.png", "apeSandbox")
-        sleep(1)
-        screen.click(r"F:\python\test\webauto\img\3.png")
+    print
+    getDefaultJVMPath()
+    startJVM(getDefaultJVMPath(), "-ea", r"-Djava.class.path=sikuli\sikulixapi.jar")
+    java.lang.System.out.println("hello world")
+    Screen = JClass("org.sikuli.script.Screen")
+    screen = Screen()
+    screen.type(r"F:\python\test\webauto\img\admin.png", "apeuni")
+    sleep(1)
+    screen.type(r"F:\python\test\webauto\img\pass.png", "apeSandbox")
+    sleep(1)
+    screen.click(r"F:\python\test\webauto\img\3.png")
 
-        # shutdownJVM()
-        ele = driver.find_element_by_id('user_email')
-        ele.send_keys(data.email)
-        sleep(1)
-        ele = driver.find_element_by_id('user_password')
-        ele.send_keys(data.password)
-        sleep(1)
-        ele = driver.find_element_by_id('sign-in-btn')
-        ele.click()
-        return
+    # shutdownJVM()
+    ele = driver.find_element_by_id('user_email')
+    ele.send_keys(data.email)
+    sleep(1)
+    ele = driver.find_element_by_id('user_password')
+    ele.send_keys(data.password)
+    sleep(1)
+    ele = driver.find_element_by_id('sign-in-btn')
+    ele.click()
+    return
 
 def redio(driver):
     #DI://*[@id="root"]/div[2]/div[4]/div/div[5]/div[2]/div[3]/div/i
