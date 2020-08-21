@@ -8,11 +8,11 @@ def login(driver):
     java.lang.System.out.println("hello world")
     Screen = JClass("org.sikuli.script.Screen")
     screen = Screen()
-    screen.type(r"F:\python\test\webauto\img\admin.png", "apeuni")
+    screen.type(r"img\admin.png", "apeuni")
     sleep(1)
-    screen.type(r"F:\python\test\webauto\img\pass.png", "apeSandbox")
+    screen.type(r"img\pass.png", "apeSandbox")
     sleep(1)
-    screen.click(r"F:\python\test\webauto\img\3.png")
+    screen.click(r"img\3.png")
 
     # shutdownJVM()
     ele = driver.find_element_by_id('user_email')
@@ -38,7 +38,7 @@ def redio(driver):
 def speak(driver,selecte,s):
     Screen = JClass("org.sikuli.script.Screen")
     screen = Screen()
-    screen.click(r"F:\python\test\webauto\img\red.png")  # 点击允许录音
+    screen.click(r"img\red.png")  # 点击允许录音
     sleep(2)
     if selecte == 1:  # 手点
         redio(driver)
@@ -57,7 +57,7 @@ def score(driver,type):
         ele = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[4]/div/div[9]/div[1]/button[1]')  # 提交
     ele.click()
     sleep(3)
-    screen.click(r"F:\python\test\webauto\img\pingfen.png")  # 点击评分
+    screen.click(r"img\pingfen.png")  # 点击评分
     if type == 2:
         sleep(1)
         ele=driver.find_element_by_xpath('/html/body/div[3]/div/div/ul/li[1]')
